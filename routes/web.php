@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('/admin');
 });
 // Admin  routes  for user
 Route::group([
