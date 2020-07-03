@@ -28,8 +28,6 @@ Route::group([
     Route::resource('banner', 'BannerResourceController');
     Route::post('/banner/destroyAll', 'BannerResourceController@destroyAll');
 
-    Route::resource('order', 'OrderResourceController');
-    Route::post('/order/destroyAll', 'OrderResourceController@destroyAll')->name('order.destroy_all');
 
     Route::resource('news', 'NewsResourceController');
     Route::post('/news/destroyAll', 'NewsResourceController@destroyAll')->name('news.destroy_all');
@@ -87,6 +85,13 @@ Route::group([
     Route::resource('role', 'RoleResourceController');
     Route::post('/role/destroyAll', 'RoleResourceController@destroyAll')->name('role.destroy_all');
     Route::get('logout', 'Auth\LoginController@logout');
+
+    Route::resource('order', 'OrderResourceController');
+    Route::post('/order/destroyAll', 'OrderResourceController@destroyAll')->name('order.destroy_all');
+
+    Route::resource('question', 'QuestionResourceController');
+    Route::post('/question/destroyAll', 'QuestionResourceController@destroyAll')->name('question.destroy_all');
+
 });
 
 //Route::get('
