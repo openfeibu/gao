@@ -21,12 +21,13 @@ return [
         'hidden'       => [],
         'visible'      => [],
         'guarded'      => ['*'],
-        'fillable'     => ['game_user_id','order_sn','content'], //数据库字段
+        'fillable'     => ['game_user_id','order_sn','content',"huifu","qufu"], //数据库字段
         'translate'    => ['content'],
         'upload_folder' => '/page/link',
         'encrypt'      => ['id'],
         'revision'     => ['name'],
         'perPage'      => '20',
+        //搜索
         'search'        => [
             'game_user_id' => '=', //12，12
             'order_sn'  => 'like', //关键字  12， 1，2，

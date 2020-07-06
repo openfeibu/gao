@@ -10,11 +10,15 @@
             <div class="fb-main-table">
                 <form class="layui-form" action="{{guard_url('order')}}" method="post" method="post" lay-filter="fb-form">
                     <div class="layui-form-item layui-form-text">
-                        <label class="layui-form-label">内容 *</label>
+                        <label class="layui-form-label">内容</label>
                         <div class="layui-input-block">
                             <script type="text/plain" id="content" name="content" style="width:1000px;height:240px;">
                             </script>
-                        </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">玩家ID</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" name="jiejue" lay-verify="title" autocomplete="off" placeholder="" class="layui-input" >
+                                </div>
                     </div>
                     <div class="layui-form-item">
                         <div class="layui-input-block">

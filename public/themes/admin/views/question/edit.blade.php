@@ -9,6 +9,18 @@
         <div class="layui-col-md12">
             <div class="fb-main-table">
                 <form class="layui-form" action="{{guard_url('question/'.$question->id)}}" method="post" method="post" lay-filter="fb-form">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">玩家ID</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="game_user_id" lay-verify="title" autocomplete="off" placeholder="" class="layui-input" value="{{ $question->game_user_id }}">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">单号</label>
+                        <div class="layui-input-inline">
+                                   <input type="text" name="order_sn" lay-verify="title" autocomplete="off" placeholder="" class="layui-input"  value="{{ $question->order_sn }}">
+                        </div>
+                    </div>
                     <div class="layui-form-item layui-form-text">
                         <label class="layui-form-label">内容 *</label>
                         <div class="layui-input-block">

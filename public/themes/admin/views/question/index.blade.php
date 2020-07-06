@@ -17,7 +17,14 @@
                 <div class="layui-block table-search mb10">
 
                     <div class="layui-inline">
-                        <input class="layui-input search_key" name="content" id="demoReload" placeholder="" autocomplete="off">
+                        <input class="layui-input search_key" name="content" id="demoReload" placeholder="内容" autocomplete="off">
+                    </div>
+
+                    <div class="layui-inline">
+                        <input class="layui-input search_key" name="game_user_id" id="demoReload" placeholder="玩家ID" autocomplete="off">
+                    </div>
+                    <div class="layui-inline">
+                        <input class="layui-input search_key" name="order_sn" id="demoReload" placeholder="单号ID" autocomplete="off">
                     </div>
 
                     <button class="layui-btn" type="button" data-type="reload">{{ trans('app.search') }}</button>
@@ -55,6 +62,8 @@
                 ,{field:'game_user_id',title:'玩家',edit:'text'}
                 ,{field:'order_sn',title:'单号',edit:'text'}
                 ,{field:'content',title:'内容'}
+                ,{field:'huifu',title:'回复',edit:'text'}
+                ,{field:'qufu',title:'区服',edit:'text'}
                 ,{field:'created_at',title:'创建时间', width:200}
                 ,{field:'updated_at',title:'更新时间', width:200}
                 ,{field:'score',title:'操作', width:200, align: 'right',toolbar:'#barDemo'}

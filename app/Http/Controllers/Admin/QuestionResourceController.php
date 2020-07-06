@@ -21,7 +21,7 @@ class QuestionResourceController extends BaseController
         $limit = $request->input('limit',config('app.limit'));
         if ($this->response->typeIs('json')) {
             $orders = $this->repository
-                ->orderBy('id','desc')
+                ->orderBy('updated_at','desc')
                 ->paginate($limit);
 
             return $this->response

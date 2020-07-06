@@ -54,6 +54,7 @@
                 {checkbox: true, fixed: true}
                 ,{field:'id',title:'ID', width:80, sort: true}
                 ,{field:'content',title:'内容'}
+                ,{field:'jiejue',title:'解决方法'}
                 ,{field:'created_at',title:'创建时间', width:200}
                 ,{field:'updated_at',title:'更新时间', width:200}
                 ,{field:'score',title:'操作', width:200, align: 'right',toolbar:'#barDemo'}

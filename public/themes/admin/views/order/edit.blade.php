@@ -10,11 +10,18 @@
             <div class="fb-main-table">
                 <form class="layui-form" action="{{guard_url('order/'.$order->id)}}" method="post" method="post" lay-filter="fb-form">
                     <div class="layui-form-item layui-form-text">
-                        <label class="layui-form-label">内容 *</label>
+                        <label class="layui-form-label">内容</label>
                         <div class="layui-input-block">
                             <script type="text/plain" id="content" name="content" style="width:1000px;height:240px;">
                                 {!! $order->content !!}
                             </script>
+                            <div class="layui-form-item layui-form-text">
+                                <label class="layui-form-label">解决方法：</label>
+                                <div class="layui-input-block">
+                                    <script type="text/plain" id="jiejue" name="jiejue" style="width:1000px;height:240px;">
+                                        {!! $order->jiejue !!}
+                                    </script>
+                                </div>
                         </div>
                     </div>
                     <div class="layui-form-item">

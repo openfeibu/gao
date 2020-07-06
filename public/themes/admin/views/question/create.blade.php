@@ -18,7 +18,7 @@
                     <div class="layui-form-item">
                         <label class="layui-form-label">单号</label>
                         <div class="layui-input-inline">
-                            <input type="text" name="order_sn" lay-verify="title" autocomplete="off" placeholder="" class="layui-input" >
+                            >         <input type="text" name="order_sn" lay-verify="title" autocomplete="off" placeholder="" class="layui-input" >
                         </div>
                     </div>
                     <!-- 注意  一定要写下面javascript  -->

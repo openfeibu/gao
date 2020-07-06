@@ -10,7 +10,7 @@
             <div class="fb-main-table">
                 <form class="layui-form" action="{{guard_url('order/'.$order->id)}}" method="post" method="post" lay-filter="fb-form">
                     <div class="layui-form-item layui-form-text">
-                        <label class="layui-form-label">内容 *</label>
+                        <label class="layui-form-label">内容：</label>
                         <div class="layui-input-block">
                             {!! $order->content !!}
                         </div>
