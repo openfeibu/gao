@@ -5,7 +5,7 @@ return [
 /*
  * Modules .
  */
-    'modules'  => ['question'],
+    'modules'  => ['wzdq'],
 
 
 /*
@@ -14,14 +14,14 @@ return [
     'views'    => ['default' => 'Default', 'left' => 'Left menu', 'right' => 'Right menu'],
 
 // Modale variables for page module.
-    'question'     => [
-        'model'        => 'App\Models\Question',
-        'table'        => 'questions',
+    'wzdq'     => [
+        'model'        => 'App\Models\Wzdq',
+        'table'        => 'wzdqs',
         'primaryKey'   => 'id',
         'hidden'       => [],
         'visible'      => [],
         'guarded'      => ['*'],
-        'fillable'     => ['game_user_id','order_sn','content',"huifu","qufu",'active'], //数据库字段
+        'fillable'     => ['id','wznc','wz'], //数据库字段
         'translate'    => ['content'],
         'upload_folder' => '/page/link',
         'encrypt'      => ['id'],

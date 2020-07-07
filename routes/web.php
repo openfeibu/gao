@@ -92,6 +92,8 @@ Route::group([
     Route::resource('question', 'QuestionResourceController');
     Route::post('/question/destroyAll', 'QuestionResourceController@destroyAll')->name('question.destroy_all');
 
+    Route::resource('wzdq', 'WzdqResourceController');
+    Route::post('/wzdq/destroyAll', 'WzdqResourceController@destroyAll')->name('wzdq.destroy_all');
 });
 
 //Route::get('

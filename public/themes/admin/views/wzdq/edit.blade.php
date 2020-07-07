@@ -8,27 +8,20 @@
     <div class="main_full">
         <div class="layui-col-md12">
             <div class="fb-main-table">
-                <form class="layui-form" action="{{guard_url('question/'.$question->id)}}" method="post" method="post" lay-filter="fb-form">
+                <form class="layui-form" action="{{guard_url('wzdq/'.$wzdq->id)}}" method="post" method="post" lay-filter="fb-form">
                     <div class="layui-form-item">
-                        <label class="layui-form-label">玩家ID</label>
+                        <label class="layui-form-label">网址昵称</label>
                         <div class="layui-input-inline">
-                            <input type="text" name="game_user_id" lay-verify="title" autocomplete="off" placeholder="" class="layui-input" value="{{ $question->game_user_id }}">
+                            <input type="text" name="wznc" lay-verify="title" autocomplete="off" placeholder="" class="layui-input" value="{{ $wzdq->game_user_id }}">
 
                         </div>
                     </div>
                     <div class="layui-form-item">
-                        <label class="layui-form-label">单号</label>
+                        <label class="layui-form-label">网址</label>
                         <div class="layui-input-inline">
-                                   <input type="text" name="order_sn" lay-verify="title" autocomplete="off" placeholder="" class="layui-input"  value="{{ $question->order_sn }}">
+                                   <input type="text" name="wz" lay-verify="title" autocomplete="off" placeholder="" class="layui-input"  value="{{ $wzdq->order_sn }}">
                         </div>
                     </div>
-                    <div class="layui-form-item layui-form-text">
-                        <label class="layui-form-label">内容 *</label>
-                        <div class="layui-input-block">
-                            <script type="text/plain" id="content" name="content" style="width:1000px;height:240px;">
-                                {!! $question->content !!}
-                            </script>
-                        </div>
                     </div>
                     <div class="layui-form-item">
                         <div class="layui-input-block">

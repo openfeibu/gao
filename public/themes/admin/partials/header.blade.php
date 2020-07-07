@@ -1,11 +1,18 @@
 <div class="layui-header">
     <ul class="layui-nav layui-layout-right">
-        <!-- <li class="layui-nav-item">
-          <a href="">控制台<span class="layui-badge">9</span></a>
+         <li class="layui-nav-item">
+
+           <a href="https://baidu.com" target="_blank" class="layui-btn">facebook双儿</a>
+
         </li>
         <li class="layui-nav-item">
-          <a href="">个人中心<span class="layui-badge-dot"></span></a>
-        </li> -->
+
+            <a href="https://baidu.com" target="_blank" class="layui-btn">新建问题</a>
+
+        </li>
+        <!-- <li class="layui-nav-item">
+           <a href="">个人中心<span class="layui-badge-dot"></span></a>
+         </li> -->
         <li class="layui-nav-item" lay-unselect="">
             <a href="javascript:;"><img src="http://t.cn/RCzsdCq" class="layui-nav-img">{{ Auth::user()->email }}</a>
             <dl class="layui-nav-child">

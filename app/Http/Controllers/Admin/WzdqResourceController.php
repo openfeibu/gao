@@ -3,16 +3,16 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Admin\ResourceController as BaseController;
-use App\Models\Question;
-use App\Repositories\Eloquent\QuestionRepository;
+use App\Models\Wzdq;
+use App\Repositories\Eloquent\WzdqRepository;
 use Illuminate\Http\Request;
 
-class QuestionResourceController extends BaseController
+class WzdqResourceController extends BaseController
 {
-    public function __construct(QuestionRepository $question)
+    public function __construct(WzdqRepository $wzdq)
     {
         parent::__construct();
-        $this->repository = $question;
+        $this->repository = $wzdq;
         $this->repository
             ->pushCriteria(\App\Repositories\Criteria\RequestCriteria::class);
     }
@@ -20,27 +20,27 @@ class QuestionResourceController extends BaseController
     {
         $limit = $request->input('limit',config('app.limit'));
         if ($this->response->typeIs('json')) {
-            $questions = $this->repository
-                ->orderBy('updated_at','desc')
+            $wzdqs = $this->repository
+                ->orderBy('id','asc')
                 ->paginate($limit);
 
             return $this->response
                 ->success()
-                ->count($questions->total())
-                ->data($questions->toArray()['data'])
+                ->count($wzdqs->total())
+                ->data($wzdqs->toArray()['data'])
                 ->output();
         }
         return $this->response->title(trans('app.admin.panel'))
-            ->view('question.index')
+            ->view('wzdq.index')
             ->output();
     }
     public function create(Request $request)
     {
-        $question = $this->repository->newInstance([]);
+        $wzdq = $this->repository->newInstance([]);
 
         return $this->response->title(trans('app.admin.panel'))
-            ->view('question.create')
-            ->data(compact('question'))
+            ->view('wzdq.create')
+            ->data(compact('wzdq'))
             ->output();
     }
     public function store(Request $request)
@@ -48,68 +48,68 @@ class QuestionResourceController extends BaseController
         try {
             $attributes = $request->all();
 
-            $question = $this->repository->create($attributes);
+            $wzdq = $this->repository->create($attributes);
 
-            return $this->response->message(trans('messages.success.created', ['Module' => trans('question.name')]))
+            return $this->response->message(trans('messages.success.created', ['Module' => trans('wzdq.name')]))
                 ->code(0)
                 ->status('success')
-                ->url(guard_url('question/'))
+                ->url(guard_url('wzdq/'))
                 ->redirect();
         } catch (Exception $e) {
             return $this->response->message($e->getMessage())
                 ->code(400)
                 ->status('error')
-                ->url(guard_url('question'))
+                ->url(guard_url('wzdq'))
                 ->redirect();
         }
     }
-    public function show(Request $request,Question $question)
+    public function show(Request $request,Wzdq $wzdq)
     {
-        if ($question->exists) {
-            $view = 'question.edit';
+        if ($wzdq->exists) {
+            $view = 'wzdq.edit';
         } else {
-            $view = 'question.create';
+            $view = 'wzdq.create';
         }
         $type = $request->get('type','');
         if($type && $type == 'show')
         {
-            $view = "question.show";
+            $view = "wzdq.show";
         }
 
-        return $this->response->title(trans('app.view') . ' ' . trans('question.name'))
-            ->data(compact('question'))
+        return $this->response->title(trans('app.view') . ' ' . trans('wzdq.name'))
+            ->data(compact('wzdq'))
             ->view($view)
             ->output();
     }
-    public function update(Request $request,Question $question)
+    public function update(Request $request,Wzdq $wzdq)
     {
         try {
             $attributes = $request->all();
 
-            $question->update($attributes);
+            $wzdq->update($attributes);
 
-            return $this->response->message(trans('messages.success.created', ['Module' => trans('question.name')]))
+            return $this->response->message(trans('messages.success.created', ['Module' => trans('wzdq.name')]))
                 ->code(0)
                 ->status('success')
-                ->url(guard_url('question/'))
+                ->url(guard_url('wzdq/'))
                 ->redirect();
         } catch (Exception $e) {
             return $this->response->message($e->getMessage())
                 ->code(400)
                 ->status('error')
-                ->url(guard_url('question/' . $question->id))
+                ->url(guard_url('wzdq/' . $wzdq->id))
                 ->redirect();
         }
     }
-    public function destroy(Request $request,Question $question)
+    public function destroy(Request $request,Wzdq $wzdq)
     {
         try {
-            $this->repository->forceDelete([$question->id]);
+            $this->repository->forceDelete([$wzdq->id]);
 
-            return $this->response->message(trans('messages.success.deleted', ['Module' => trans('question.name')]))
+            return $this->response->message(trans('messages.success.deleted', ['Module' => trans('wzdq.name')]))
                 ->status("success")
                 ->http_code(202)
-                ->url(guard_url('question'))
+                ->url(guard_url('wzdq'))
                 ->redirect();
 
         } catch (Exception $e) {
@@ -117,7 +117,7 @@ class QuestionResourceController extends BaseController
             return $this->response->message($e->getMessage())
                 ->status("error")
                 ->code(400)
-                ->url(guard_url('question'))
+                ->url(guard_url('wzdq'))
                 ->redirect();
         }
     }
@@ -128,17 +128,17 @@ class QuestionResourceController extends BaseController
             $ids = $data['ids'];
             $this->repository->forceDelete($ids);
 
-            return $this->response->message(trans('messages.success.deleted', ['Module' => trans('question.name')]))
+            return $this->response->message(trans('messages.success.deleted', ['Module' => trans('wzdq.name')]))
                 ->status("success")
                 ->http_code(202)
-                ->url(guard_url('question'))
+                ->url(guard_url('wzdq'))
                 ->redirect();
 
         } catch (Exception $e) {
             return $this->response->message($e->getMessage())
                 ->status("error")
                 ->code(400)
-                ->url(guard_url('question'))
+                ->url(guard_url('wzdq'))
                 ->redirect();
         }
     }
