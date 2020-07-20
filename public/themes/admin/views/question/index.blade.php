@@ -62,14 +62,14 @@
             ,cols: [[
                 {checkbox: true, fixed: true}
                 ,{field:'id',title:'ID', width:80, sort: true}
-                ,{field:'game_user_id',title:'玩家',edit:'text'}
-                ,{field:'order_sn',title:'单号',edit:'text'}
-                ,{field:'content',title:'内容'}
-                ,{field:'huifu',title:'回复',edit:'text'}
-                ,{field:'qufu',title:'区服',edit:'text'}
-                ,{field:'active',title:'处理结果',width:120,templet:'#activeTpl'}
+                ,{field:'game_user_id',title:'跟进渠道',edit:'text', width:120}
+                ,{field:'order_sn',title:'玩家联系方式',edit:'text',width:120}
+                ,{field:'content',title:'工单号/问题',edit:'text',width:120}
+                ,{field:'huifu',title:'交接人',edit:'text',width:120}
+                ,{field:'qufu',title:'备注/说明',edit:'text',width:500}
+                ,{field:'active',title:'是否处理',width:120,templet:'#activeTpl'}
                 ,{field:'created_at',title:'创建时间', width:200}
-                ,{field:'updated_at',title:'更新时间', width:200}
+              //  ,{field:'updated_at',title:'更新时间', width:200}
                 ,{field:'score',title:'操作', width:200, align: 'right',toolbar:'#barDemo'}
             ]]
             ,id: 'fb-table'
