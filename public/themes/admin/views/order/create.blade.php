@@ -15,16 +15,17 @@
                             <script type="text/plain" id="content" name="content" style="width:1000px;height:240px;">
                             </script>
                             <div class="layui-form-item">
-                                <label class="layui-form-label">玩家ID</label>
+                                <label class="layui-form-label">解决方法</label>
                                 <div class="layui-input-inline">
                                     <input type="text" name="jiejue" lay-verify="title" autocomplete="off" placeholder="" class="layui-input" >
                                 </div>
-                    </div>
-                    <div class="layui-form-item">
-                        <div class="layui-input-block">
-                            <button class="layui-btn" lay-submit="" lay-filter="demo1">立即提交</button>
-                        </div>
-                    </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <div class="layui-input-block">
+                                    <button class="layui-btn" lay-submit="" lay-filter="demo1">立即提交</button>
+                                </div>
+
+                            </div>
                     {!!Form::token()!!}
                 </form>
             </div>

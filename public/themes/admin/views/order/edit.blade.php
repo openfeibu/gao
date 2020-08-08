@@ -15,12 +15,11 @@
                             <script type="text/plain" id="content" name="content" style="width:1000px;height:240px;">
                                 {!! $order->content !!}
                             </script>
-                            <div class="layui-form-item layui-form-text">
-                                <label class="layui-form-label">解决方法：</label>
-                                <div class="layui-input-block">
-                                    <script type="text/plain" id="jiejue" name="jiejue" style="width:1000px;height:240px;">
-                                        {!! $order->jiejue !!}
-                                    </script>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">解决方法</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" name="jiejue" lay-verify="title" autocomplete="off" placeholder="" class="layui-input" >
+                                </div>
                                 </div>
                         </div>
                     </div>

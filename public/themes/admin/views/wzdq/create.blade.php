@@ -22,13 +22,6 @@
                         </div>
                     </div>
                     <!-- 注意  一定要写下面javascript  -->
-                    <div class="layui-form-item layui-form-text">
-                        <label class="layui-form-label">内容 *</label>
-                        <div class="layui-input-block">
-                            <script type="text/plain" id="content" name="content" style="width:1000px;height:240px;">
-                            </script>
-                        </div>
-                    </div>
                     <div class="layui-form-item">
                         <div class="layui-input-block">
                             <button class="layui-btn" lay-submit="" lay-filter="demo1">立即提交</button>

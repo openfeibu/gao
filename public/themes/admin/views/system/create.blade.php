@@ -13,7 +13,7 @@
                     <div class="layui-form-item">
                         <label class="layui-form-label">标题</label>
                         <div class="layui-input-inline">
-                            <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入标题" class="layui-input" >
+                            <input type="text/plain" name="title" lay-verify="title" autocomplete="off" placeholder="请输入标题" class="layui-input" style="width:1000px;height:240px;" >
                         </div>
                     </div>
                     <div class="layui-form-item">

@@ -20,6 +20,10 @@
                         <input class="layui-input search_key" name="content" id="demoReload" placeholder="" autocomplete="off">
                     </div>
 
+                    <div class="layui-inline">
+                        <input class="layui-input search_key" name="jiejue" id="demoReload" placeholder="" autocomplete="off">
+                    </div>
+
                     <button class="layui-btn" type="button" data-type="reload">{{ trans('app.search') }}</button>
                 </div>
             </div>
@@ -53,8 +57,8 @@
             ,cols: [[
                 {checkbox: true, fixed: true}
                 ,{field:'id',title:'ID', width:80, sort: true}
-                ,{field:'content',title:'内容'}
-                ,{field:'jiejue',title:'解决方法'}
+                ,{field:'content',title:'内容',}
+              // ,{field:'jiejue',title:'解决方法'}
                 ,{field:'created_at',title:'创建时间', width:200}
                 ,{field:'updated_at',title:'更新时间', width:200}
                 ,{field:'score',title:'操作', width:200, align: 'right',toolbar:'#barDemo'}

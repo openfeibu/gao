@@ -46,6 +46,26 @@
             <a href="http://www.gamebase.com.tw/forum/78518/thread" target="_blank" class="layui-btn">叫我官老爷游戏基地</a>
 
         </li>
+        <li class="layui-nav-item">
+
+            <a href="https://www.facebook.com/pg/JWGLYJT/posts/?ref=page_internal" target="_blank" class="layui-btn">简体帖子</a>
+
+        </li>
+        <li class="layui-nav-item">
+
+            <a href="https://www.facebook.com/pg/JWGLY/posts/?ref=page_internal" target="_blank" class="layui-btn">繁体帖子</a>
+
+        </li>
+        <li class="layui-nav-item">
+
+            <a href="https://www.facebook.com/groups/1565570086809361/?source_id=1804776816505613" target="_blank" class="layui-btn">简体小组帖子</a>
+
+        </li>
+        <li class="layui-nav-item">
+
+            <a href="https://www.facebook.com/groups/621504214720275/?source_id=622546104602619" target="_blank" class="layui-btn">繁体小组帖子</a>
+
+        </li>
         <!-- <li class="layui-nav-item">
            <a href="">个人中心<span class="layui-badge-dot"></span></a>
          </li> -->
